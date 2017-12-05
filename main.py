@@ -8,7 +8,7 @@ cgitb.enable() # Will catch tracebacks and errors for you. Comment it out if you
 if __name__ == '__main__':
   YourFormProcessor.Process_Form() # This is your logic to process the form.
 
-  redirectURL = "/?r=%s" % random.randint(0,100000000)
+  redirectURL = "willper.me"
 
   print 'Content-Type: text/html'
   print 'Location: %s' % redirectURL
