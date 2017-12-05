@@ -1,0 +1,8 @@
+{
+  "name": "willper-cdn",
+  "description": "Heroku Python CDN",
+  "image": "heroku/python",
+  "repository": "https://github.com/willzone1/willper-cdn",
+  "keywords": ["python", "django" ],
+  "addons": [  ]
+}
