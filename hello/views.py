@@ -7,6 +7,7 @@ from .models import Greeting
 def index(request):
     # return HttpResponse('Hello from Python!')
     return render(request, 'index.html')
+	#TODO: write code that redirects
 
 
 def db(request):
