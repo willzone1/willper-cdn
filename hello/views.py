@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import main
+import Willmain
 
 from .models import Greeting
 
 # Create your views here.
 def index(request):
 	# return HttpResponse('Hello from Python!')
-	main.main()
+	Willmain.main()
 	return render(request, 'index.html')
 	#TODO: write code that redirects
 
