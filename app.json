@@ -1,8 +1,16 @@
 {
-  "name": "willper-cdn",
-  "description": "Heroku Python CDN",
+  "name": "Start on Heroku: Python",
+  "description": "A barebones Python app, which can easily be deployed to Heroku.",
   "image": "heroku/python",
-  "repository": "https://github.com/willzone1/willper-cdn",
+  "repository": "https://github.com/heroku/python-getting-started",
   "keywords": ["python", "django" ],
-  "addons": [  ]
+  "addons": [ "heroku-postgresql" ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python manage.py collectstatic --noinput",
+        "test": "python manage.py test"
+      }
+    }
+  }
 }
