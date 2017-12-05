@@ -3,8 +3,9 @@ from django.http import HttpResponse
 from django.template import  RequestContext
 from django.shortcuts import render_to_response
 import Willmain
-
 from .models import Greeting
+from django.contrib.gis.utils import GeoIP
+
 
 # Create your views here.
 def index(request):
