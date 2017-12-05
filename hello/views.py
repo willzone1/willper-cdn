@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-#from django.contrib.gis.utils import GeoIP
 from django.template import  RequestContext
 from django.shortcuts import render_to_response
 import Willmain

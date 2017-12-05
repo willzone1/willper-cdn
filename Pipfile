@@ -5,6 +5,7 @@ verify_ssl = true
 [packages]
 dj-database-url = "*"
 django = "*"
+GDAL = "*"
 gunicorn = "*"
 psycopg2 = "*"
 whitenoise = "*"
