@@ -10,7 +10,7 @@ from .models import Greeting
 # Create your views here.
 def index(request):
 	# return HttpResponse('Hello from Python!')
-	IP = get_flient_ip(request)
+	IP = get_client_ip(request)
 	print(IP)
 	Willmain.main()
 	return render(request, 'index.html')
