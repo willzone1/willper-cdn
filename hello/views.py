@@ -6,9 +6,9 @@ from .models import Greeting
 
 # Create your views here.
 def index(request):
-	main
-    # return HttpResponse('Hello from Python!')
-    return render(request, 'index.html')
+	# return HttpResponse('Hello from Python!')
+	main.main()
+	return render(request, 'index.html')
 	#TODO: write code that redirects
 
 
