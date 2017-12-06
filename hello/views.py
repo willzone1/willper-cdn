@@ -10,7 +10,9 @@ def index(request):
 	# return HttpResponse('Hello from Python!')
 	
 	# RUN CDN LOGIC HERE
-	Willmain.main(request)
+	serverChoice = Willmain.main(request)
+	
+	print("Server chosen: %d" % serverChoice)
 	
 	# Display redirect page
 	return render(request, 'index.html')

@@ -10,11 +10,22 @@ def main(request):
 	IP = get_client_ip(request)
 	reader = geoip2.database.Reader('GeoLite2-City.mmdb')
 	# IP = "173.48.96.93"
+	if IP == "127.0.0.1":
+		IP = "173.48.96.93"
 	response = reader.city(IP)
 	latitude = response.location.latitude
 	longitude = response.location.longitude
 	print(latitude,longitude)
-	return
+	
+	# if 30 < latitude < 100, route to WILLZONE(0)
+	# else RAVEN(1)
+	
+	if (latitude < 100 and latitude > 30):
+		serverChoice = 0
+	else:
+		serverChoice = 1
+	
+	return serverChoice
 	
 if __name__ == '__main__':
 	main()
