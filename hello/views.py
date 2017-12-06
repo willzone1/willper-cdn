@@ -14,8 +14,12 @@ def index(request):
 	
 	print("Server chosen: %d" % serverChoice)
 	
+	if (serverChoice == 0):
+		page = "willzone.html"
+	else:
+		page = "raven.html"
 	# Display redirect page
-	return render(request, 'index.html')
+	return render(request, page)
 
 
 def db(request):
