@@ -10,7 +10,9 @@ def index(request):
 	# return HttpResponse('Hello from Python!')
 	IP = get_client_ip(request)
 	print(IP)
+	
 	Willmain.main(IP)
+	
 	return render(request, 'index.html')
 	#TODO: write code that redirects
 
