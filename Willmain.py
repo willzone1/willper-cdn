@@ -9,7 +9,8 @@ import geoip2.database
 def main(request):
 	IP = get_client_ip(request)
 	reader = geoip2.database.Reader('GeoLite2-City.mmdb')
-	response = reader.location(IP)
+	# IP = "173.48.96.93"
+	response = reader.city(IP)
 	latitude = response.location.latitude
 	longitude = response.location.longitude
 	print(latitude,longitude)
