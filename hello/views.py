@@ -4,16 +4,18 @@ from django.template import  RequestContext
 from django.shortcuts import render_to_response
 import Willmain
 from .models import Greeting
-import geoip2
 
 # Create your views here.
 def index(request):
 	# return HttpResponse('Hello from Python!')
 	IP = get_client_ip(request)
 	print(IP)
-	Willmain.main()
+	
+	# RUN CDN LOGIC HERE
+	Willmain.main(IP)
+	
+	# Display redirect page
 	return render(request, 'index.html')
-	#TODO: write code that redirects
 
 
 def db(request):
