@@ -20,7 +20,7 @@ def main(request):
 	# if 30 < latitude < 100, route to WILLZONE(0)
 	# else RAVEN(1)
 	
-	if (longitude < -100 and longitude > -30):
+	if (longitude > -100 and longitude < -30):
 		serverChoice = 0
 	else:
 		serverChoice = 1
