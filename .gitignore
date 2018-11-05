@@ -3,3 +3,6 @@ venv
 staticfiles
 .env
 db.sqlite3
+private.key
+certificate.crt
+ca_bundle.crt
